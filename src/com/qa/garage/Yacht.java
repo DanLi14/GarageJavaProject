@@ -26,7 +26,7 @@ public class Yacht extends Vehicle {
 	public void setBoatSize(String boatSize) {
 		this.boatSize = boatSize;
 	}
-
+	
 	@Override
 	public String toString() {
 		return "Yacht [id=" + id + ", boatSize=" + boatSize + "]";

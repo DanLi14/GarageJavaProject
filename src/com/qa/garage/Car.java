@@ -29,7 +29,7 @@ public class Car extends Vehicle {
 
 	@Override
 	public String toString() {
-		return "Car [id=" + id + ", speedType=" + gearbox + "]";
+		return "Car [id=" + id + ", gearbox=" + gearbox + "]";
 	}
 	
 	
