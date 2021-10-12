@@ -3,12 +3,12 @@ package com.qa.garage;
 public class Car extends Vehicle {
 
 	int id;
-	String speedType;
+	String gearbox;
 
-	public Car(float engineSize, int numOfSeats, String manufacturer, int topSpeed, int id, String speedType) {
+	public Car(float engineSize, int numOfSeats, String manufacturer, int topSpeed, int id, String gearbox) {
 		super(engineSize, numOfSeats, manufacturer, topSpeed);
 		this.id = id;
-		this.speedType = speedType;
+		this.gearbox = gearbox;
 	}
 
 	public int getId() {
@@ -19,17 +19,17 @@ public class Car extends Vehicle {
 		this.id = id;
 	}
 
-	public String getSpeedType() {
-		return speedType;
+	public String getGearBox() {
+		return gearbox;
 	}
 
-	public void setSpeedType(String speedType) {
-		this.speedType = speedType;
+	public void setGearBox(String speedType) {
+		this.gearbox = speedType;
 	}
 
 	@Override
 	public String toString() {
-		return "Car [id=" + id + ", speedType=" + speedType + "]";
+		return "Car [id=" + id + ", speedType=" + gearbox + "]";
 	}
 	
 	
