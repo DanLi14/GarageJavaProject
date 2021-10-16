@@ -2,21 +2,11 @@ package com.qa.garage;
 
 public class Yacht extends Vehicle {
 
-	int id;
-	String boatSize;
+	private String boatSize;
 
 	public Yacht(float engineSize, int numOfSeats, String manufacturer, int topSpeed, int id, String boatSize) {
-		super(engineSize, numOfSeats, manufacturer, topSpeed);
-		this.id = id;
+		super(engineSize, numOfSeats, manufacturer, topSpeed, id);
 		this.boatSize = boatSize;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getBoatSize() {
@@ -28,8 +18,9 @@ public class Yacht extends Vehicle {
 	}
 	
 	@Override
-	public String toString() {
-		return "Yacht [id=" + id + ", boatSize=" + boatSize + "]";
+	public int calculateBill() {
+		return 1000000 * Yacht.super.getTopSpeed();
 	}
+
 
 }

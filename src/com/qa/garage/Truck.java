@@ -2,19 +2,14 @@ package com.qa.garage;
 
 public class Truck extends Vehicle {
 
-	int id;
-	int payload;
-	String bodyType;
+	private int payload;
+	private String bodyType;
 
-	public Truck(float engineSize, int numOfSeats, String manufacturer, int topSpeed, int id, int payload, String bodyType) {
-		super(engineSize, numOfSeats, manufacturer, topSpeed);
-		this.id = id;
+	public Truck(float engineSize, int numOfSeats, String manufacturer, int topSpeed, int id, int payload,
+			String bodyType) {
+		super(engineSize, numOfSeats, manufacturer, topSpeed, id);
 		this.payload = payload;
 		this.bodyType = bodyType;
-	}
-	
-	public int getId() {
-		return id;
 	}
 
 	public int getPayload() {
@@ -34,8 +29,8 @@ public class Truck extends Vehicle {
 	}
 
 	@Override
-	public String toString() {
-		return "Truck [payload=" + payload + ", bodyType=" + bodyType + "]";
+	public int calculateBill() {
+		return 1000 * Truck.super.getTopSpeed();
 	}
 
 }
